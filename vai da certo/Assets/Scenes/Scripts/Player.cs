@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 { 
     public int velocidade = 15;
-    public int forcaPulo;
+    public int forcaPulo = 7;
 
     private Rigidbody rb;
 
