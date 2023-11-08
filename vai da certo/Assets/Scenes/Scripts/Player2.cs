@@ -36,7 +36,7 @@ public class Player2 : MonoBehaviour
         rb.AddForce(new Vector3(h, 0, v) * velocidade);
 
         if(Input.GetKeyDown(KeyCode.Space) && (noChao == true)){
-            //source.PlayOneShot(clipPulo);
+            source.Play();
             rb.AddForce(Vector3.up * forcaPulo, ForceMode.Impulse);
             noChao = false;
         }
