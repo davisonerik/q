@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player2 : MonoBehaviour
 { 
-    public int velocidade = 10;
+    public int velocidade = 5;
     public int forcaPulo = 7;
 
     private Rigidbody rb;
@@ -36,7 +36,7 @@ public class Player2 : MonoBehaviour
         rb.AddForce(new Vector3(h, 0, v) * velocidade);
 
         if(Input.GetKeyDown(KeyCode.Space) && (noChao == true)){
-            source.PlayOneShot(clipPulo);
+            //source.PlayOneShot(clipPulo);
             rb.AddForce(Vector3.up * forcaPulo, ForceMode.Impulse);
             noChao = false;
         }

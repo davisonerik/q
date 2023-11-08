@@ -11,8 +11,10 @@ public class moeda : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other){
-        if (other.tag == "Player")
-        Destroy(gameObject);
+        if (other.tag == "Player"){
+            FindObjectOfType<GameManager>().SubtrairMoedas(1);
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void Update()
